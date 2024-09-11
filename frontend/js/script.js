@@ -13,7 +13,7 @@ document.getElementById('bannerForm').addEventListener('submit', async function 
   try {
     // Send form data to your Gemini API endpoint
     const response = await fetch('YOUR_GEMINI_API_ENDPOINT', {
-      method: 'POST',
+      method: 'POST', 
       body: formData
     }); 
     //hello
