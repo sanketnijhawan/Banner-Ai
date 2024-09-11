@@ -15,8 +15,7 @@ document.getElementById('bannerForm').addEventListener('submit', async function 
     const response = await fetch('YOUR_GEMINI_API_ENDPOINT', {
       method: 'POST', 
       body: formData
-    }); 
-    //hello
+    });
 
     const result = await response.json();
     // Assuming the response contains a URL of the generated banner
