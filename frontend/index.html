@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigBasket Banner Generator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="#" alt="Logo">
+    </div>
+    <div class="user-actions">
+      <!-- <a href="#">My Account</a> -->
+      <a href="#">Help</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="generator-container">
+      <div class="form-section">
+        <h2>Create a Banner</h2>
+        <form id="bannerForm">
+          <div class="form-group">
+            <label for="bannerText">Enter Banner Text:</label>
+            <input type="text" id="bannerText" name="bannerText" placeholder="E.g., Special Diwali Sale!" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="productImage">Upload Product Image:</label>
+            <input type="file" id="productImage" name="productImage" required>
+          </div>
+
+          <div class="form-group">
+            <label for="theme">Select Theme:</label>
+            <select id="theme" name="theme" required>
+              <option value="Holi">Holi</option>
+              <option value="Diwali">Diwali</option>
+              <option value="Christmas">Christmas</option>
+              <option value="Independence Day">Independence Day</option>
+              <option value="Rakshabandhan">Rakshabandhan</option>
+              <option value="Valentine's Day">Valentine's Day</option>
+            </select>
+          </div>
+
+          <button type="submit">Generate Banner</button>
+        </form>
+      </div>
+
+      <div class="preview-section">
+        <h2>Banner Preview</h2>
+        <img id="bannerImage" src="placeholder-banner.jpg" alt="Banner Preview" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="social-media">
+      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
