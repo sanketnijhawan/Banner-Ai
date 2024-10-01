@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: green;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
+            width: 50%;
+            text-align: center;
+        }
+
+        .form-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid green;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .form-container input:focus {
+            box-shadow: 0 4px 12px rgba(0, 128, 0, 0.5);
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-button:hover {
+            background-color: darkgreen;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enter Details</h1>
+        <img id="selected-image" alt="Selected Banner">
+        <input type="text" placeholder="Occasion">
+        <input type="text" placeholder="Offer">
+        <input type="text" placeholder="Seasonal">
+        <input type="text" placeholder="Festival">
+        <button class="submit-button" type="submit">Submit</button>
+    </div>
+
+    <script>
+        // Get the selected image from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedImage = urlParams.get('image');
+
+        // Set the image source dynamically
+        document.getElementById('selected-image').src = selectedImage + '.jpg';
+    </script>
+</body>
+</html>
