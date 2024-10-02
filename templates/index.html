@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="my_flask_app\static\css\main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Generate Banner from Text Prompt</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-section">
+                <form method="POST">
+                    <label for="prompt">Enter your prompt:</label>
+                    <textarea id="prompt" name="prompt" placeholder="Type your prompt here..." required></textarea>
+                    <button type="submit">Generate Image</button>
+                </form>
+
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </div>
+
+            <div class="right-section">
+                {% if image_url %}
+                <h2>Generated Image for: "{{ prompt }}"</h2>
+                <img src="{{ url_for('static', filename=image_url) }}" alt="Generated Image" class="collage-image">
+                {% else %}
+                <img src="banner1.jpg" alt="Banner 1" class="collage-image">
+                {% endif %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>
